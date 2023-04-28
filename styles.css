@@ -1,0 +1,82 @@
+.main {
+    margin: 0 auto;
+    max-width: fit-content;
+    font-family: "Trebuchet MS", "Helvetica", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.area-label {
+    display: block;
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+    font-size: 54px;
+    font-weight: 600;
+}
+
+.choose-lang {
+    display:flex;
+    gap: 30px;
+    justify-content: center;
+    font-family: "Trebuchet MS", "Helvetica", sans-serif;
+    font-size: 24px;
+}
+
+#typing-area {
+    font-family: "Trebuchet MS", "Helvetica", sans-serif;
+    font-size: 24px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+.keyboard {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    background: #888888;
+    border: 3px solid black;
+    box-sizing: border-box;
+    width: 970px;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+.keyboard__raw {
+    display: flex;
+    flex-wrap: no-wrap;
+    gap: 0.5rem;
+}
+
+.keyboard__key {
+    border-radius: 5px;
+    outline: none;
+    font-family: "Trebuchet MS", "Helvetica", sans-serif;
+    font-size: 24px;
+    min-width: 50px;
+    min-height: 50px;
+    background: #444444;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+.keyboard__key:hover{
+    background-color:#96d9c3;
+}
+
+.keyboard__key_color-add {
+    background-color: black;
+    font-weight: 600;
+}
+
+.upper-case {
+    text-transform: uppercase;
+}

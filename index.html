@@ -10,6 +10,29 @@
 </head>
 
 <body>
+    <main class="main">
+        <label class="area-label" for="typing-area">Virtual keybord</label>
+        <div class="choose-lang">
+            <div class="choose-lang__option">
+                <input name="lang" type="radio" id="en" class="choose-lang__input" value="eng" checked>
+                <label for="en">English</label>
+            </div>
+            <div class="choose-lang__option">
+                <input name="lang" type="radio" id="ru" class="choose-lang__input" value="ru">
+                <label for="ru">Russian</label>
+            </div>
+        </div>
+        <textarea id="typing-area" rows="8" cols="75" placeholder="Start typing here"></textarea>
+        <div class="keyboard">
+            <div class="keyboard__raw">
+                <button type="button" class="keyboard__key keyboard__key_color-main">q</button>
+                <button type="button" class="keyboard__key keyboard__key_color-main">w</button>
+            </div>
+            <div class="keyboard__raw">
+                <button type="button" class="keyboard__key keyboard__key_color-add">Shift</button>
+            </div>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 
