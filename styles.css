@@ -49,6 +49,7 @@
     display: flex;
     flex-wrap: no-wrap;
     gap: 0.5rem;
+    justify-content: center;
 }
 
 .keyboard__key {
@@ -75,6 +76,10 @@
 .keyboard__key_color-add {
     background-color: black;
     font-weight: 600;
+}
+
+.keyboard__key.space {
+    width: 390px;
 }
 
 .upper-case {
