@@ -1,701 +1,4 @@
-const keyboards = [
-  {
-    lang: 'en',
-    keyboard: [
-      [
-        {
-          keyName: '`',
-          keyCode: '`',
-          caps: false,
-          shift: '-',
-        },
-        {
-          keyName: '1',
-          keyCode: '1',
-          caps: false,
-          shift: '!',
-        },
-        {
-          keyName: '2',
-          keyCode: '2',
-          caps: false,
-          shift: '@',
-        },
-        {
-          keyName: '3',
-          keyCode: '3',
-          caps: false,
-          shift: '#',
-        },
-        {
-          keyName: '4',
-          keyCode: '4',
-          caps: false,
-          shift: '$',
-        },
-        {
-          keyName: '5',
-          keyCode: '5',
-          caps: false,
-          shift: '%',
-        },
-        {
-          keyName: '6',
-          keyCode: '6',
-          caps: false,
-          shift: '^',
-        },
-        {
-          keyName: '7',
-          keyCode: '7',
-          caps: false,
-          shift: '&',
-        },
-        {
-          keyName: '8',
-          keyCode: '8',
-          caps: false,
-          shift: '*',
-        },
-        {
-          keyName: '9',
-          keyCode: '9',
-          caps: false,
-          shift: '(',
-        },
-        {
-          keyName: '0',
-          keyCode: '0',
-          caps: false,
-          shift: ')',
-        },
-        {
-          keyName: '-',
-          keyCode: '-',
-          caps: false,
-          shift: '_',
-        },
-        {
-          keyName: '=',
-          keyCode: '=',
-          caps: false,
-          shift: '+',
-        },
-        {
-          keyName: 'Backspace',
-          keyCode: 'Backspace',
-          caps: false,
-        },
-      ],
-      [
-        {
-          keyName: 'Tab',
-          keyCode: 'Tab',
-          caps: false,
-        },
-        {
-          keyName: 'q',
-          keyCode: 'q',
-          caps: true,
-        },
-        {
-          keyName: 'w',
-          keyCode: 'w',
-          caps: true,
-        },
-        {
-          keyName: 'e',
-          keyCode: 'e',
-          caps: true,
-        },
-        {
-          keyName: 'r',
-          keyCode: 'r',
-          caps: true,
-        },
-        {
-          keyName: 't',
-          keyCode: 't',
-          caps: true,
-        },
-        {
-          keyName: 'y',
-          keyCode: 'y',
-          caps: true,
-        },
-        {
-          keyName: 'u',
-          keyCode: 'u',
-          caps: true,
-        },
-        {
-          keyName: 'i',
-          keyCode: 'i',
-          caps: true,
-        },
-        {
-          keyName: 'o',
-          keyCode: 'o',
-          caps: true,
-        },
-        {
-          keyName: 'p',
-          keyCode: 'p',
-          caps: true,
-        },
-        {
-          keyName: '[',
-          keyCode: '[',
-          caps: false,
-          shift: '{',
-        },
-        {
-          keyName: ']',
-          keyCode: ']',
-          caps: false,
-          shift: '}',
-        },
-        {
-          keyName: '\\',
-          keyCode: '\\',
-          caps: false,
-          shift: '|',
-        },
-      ],
-      [
-        {
-          keyName: 'CapsLock',
-          keyCode: 'CapsLock',
-          caps: false,
-        },
-        {
-          keyName: 'a',
-          keyCode: 'a',
-          caps: true,
-        },
-        {
-          keyName: 's',
-          keyCode: 's',
-          caps: true,
-        },
-        {
-          keyName: 'd',
-          keyCode: 'd',
-          caps: true,
-        },
-        {
-          keyName: 'f',
-          keyCode: 'f',
-          caps: true,
-        },
-        {
-          keyName: 'g',
-          keyCode: 'g',
-          caps: true,
-        },
-        {
-          keyName: 'h',
-          keyCode: 'h',
-          caps: true,
-        },
-        {
-          keyName: 'j',
-          keyCode: 'j',
-          caps: true,
-        },
-        {
-          keyName: 'k',
-          keyCode: 'k',
-          caps: true,
-        },
-        {
-          keyName: 'l',
-          keyCode: 'l',
-          caps: true,
-        },
-        {
-          keyName: ';',
-          keyCode: ';',
-          caps: false,
-          shift: ':',
-        },
-        {
-          keyName: "'",
-          keyCode: "'",
-          caps: false,
-          shift: '"',
-        },
-        {
-          keyName: 'Enter',
-          keyCode: 'Enter',
-          caps: false,
-        },
-      ],
-      [
-        {
-          keyName: 'Shift',
-          keyCode: 'Shift',
-          caps: false,
-        },
-        {
-          keyName: 'z',
-          keyCode: 'z',
-          caps: true,
-        },
-        {
-          keyName: 'x',
-          keyCode: 'x',
-          caps: true,
-        },
-        {
-          keyName: 'c',
-          keyCode: 'c',
-          caps: true,
-        },
-        {
-          keyName: 'v',
-          keyCode: 'v',
-          caps: true,
-        },
-        {
-          keyName: 'b',
-          keyCode: 'b',
-          caps: true,
-        },
-        {
-          keyName: 'n',
-          keyCode: 'n',
-          caps: true,
-        },
-        {
-          keyName: 'm',
-          keyCode: 'm',
-          caps: true,
-        },
-        {
-          keyName: ',',
-          keyCode: ',',
-          caps: false,
-          shift: '<',
-        },
-        {
-          keyName: '.',
-          keyCode: '.',
-          caps: false,
-          shift: '>',
-        },
-        {
-          keyName: '/',
-          keyCode: '/',
-          caps: false,
-          shift: '?',
-        },
-        {
-          keyName: '▲',
-          keyCode: 'ArrowUp',
-          caps: false,
-        },
-        {
-          keyName: 'Shift',
-          keyCode: 'Shift',
-          caps: false,
-        },
-      ],
-      [
-        {
-          keyName: 'Ctrl',
-          keyCode: 'Ctrl',
-          caps: false,
-        },
-        {
-          keyName: 'Win',
-          keyCode: 'Meta',
-          caps: false,
-        },
-        {
-          keyName: 'Alt',
-          keyCode: 'Alt',
-          caps: false,
-        },
-        {
-          keyName: '',
-          keyCode: '',
-          caps: false,
-        },
-        {
-          keyName: 'Alt',
-          keyCode: 'Alt',
-          caps: false,
-        },
-        {
-          keyName: '◄',
-          keyCode: 'ArrowLeft',
-          caps: false,
-        },
-        {
-          keyName: '▼',
-          keyCode: 'ArrowDown',
-          caps: false,
-        },
-        {
-          keyName: '►',
-          keyCode: 'ArrowRight',
-          caps: false,
-        },
-        {
-          keyName: 'Ctrl',
-          keyCode: 'Ctrl',
-          caps: false,
-        },
-      ],
-    ],
-  },
-  {
-    lang: 'ru',
-    keyboard: [
-      [
-        {
-          keyName: 'ё',
-          keyCode: 'ё',
-          caps: true,
-        },
-        {
-          keyName: '1',
-          keyCode: '1',
-          caps: false,
-          shift: '!',
-        },
-        {
-          keyName: '2',
-          keyCode: '2',
-          caps: false,
-          shift: '"',
-        },
-        {
-          keyName: '3',
-          keyCode: '3',
-          caps: false,
-          shift: '№',
-        },
-        {
-          keyName: '4',
-          keyCode: '4',
-          caps: false,
-          shift: ';',
-        },
-        {
-          keyName: '5',
-          keyCode: '5',
-          caps: false,
-          shift: '%',
-        },
-        {
-          keyName: '6',
-          keyCode: '6',
-          caps: false,
-          shift: ':',
-        },
-        {
-          keyName: '7',
-          keyCode: '7',
-          caps: false,
-          shift: '?',
-        },
-        {
-          keyName: '8',
-          keyCode: '8',
-          caps: false,
-          shift: '*',
-        },
-        {
-          keyName: '9',
-          keyCode: '9',
-          caps: false,
-          shift: '(',
-        },
-        {
-          keyName: '0',
-          keyCode: '0',
-          caps: false,
-          shift: ')',
-        },
-        {
-          keyName: '-',
-          keyCode: '-',
-          caps: false,
-          shift: '_',
-        },
-        {
-          keyName: '=',
-          keyCode: '=',
-          caps: false,
-          shift: '+',
-        },
-        {
-          keyName: 'Backspace',
-          keyCode: 'Backspace',
-          caps: false,
-        },
-      ],
-      [
-        {
-          keyName: 'Tab',
-          keyCode: 'Tab',
-          caps: false,
-        },
-        {
-          keyName: 'й',
-          keyCode: 'й',
-          caps: true,
-        },
-        {
-          keyName: 'ц',
-          keyCode: 'ц',
-          caps: true,
-        },
-        {
-          keyName: 'у',
-          keyCode: 'у',
-          caps: true,
-        },
-        {
-          keyName: 'к',
-          keyCode: 'к',
-          caps: true,
-        },
-        {
-          keyName: 'е',
-          keyCode: 'е',
-          caps: true,
-        },
-        {
-          keyName: 'н',
-          keyCode: 'н',
-          caps: true,
-        },
-        {
-          keyName: 'г',
-          keyCode: 'г',
-          caps: true,
-        },
-        {
-          keyName: 'ш',
-          keyCode: 'ш',
-          caps: true,
-        },
-        {
-          keyName: 'щ',
-          keyCode: 'щ',
-          caps: true,
-        },
-        {
-          keyName: 'з',
-          keyCode: 'з',
-          caps: true,
-        },
-        {
-          keyName: 'х',
-          keyCode: 'х',
-          caps: true,
-        },
-        {
-          keyName: 'ъ',
-          keyCode: 'ъ',
-          caps: true,
-        },
-        {
-          keyName: '\\',
-          keyCode: '\\',
-          caps: false,
-          shift: '/',
-        },
-      ],
-      [
-        {
-          keyName: 'CapsLock',
-          keyCode: 'CapsLock',
-          caps: false,
-        },
-        {
-          keyName: 'ф',
-          keyCode: 'ф',
-          caps: true,
-        },
-        {
-          keyName: 'ы',
-          keyCode: 'ы',
-          caps: true,
-        },
-        {
-          keyName: 'в',
-          keyCode: 'в',
-          caps: true,
-        },
-        {
-          keyName: 'а',
-          keyCode: 'а',
-          caps: true,
-        },
-        {
-          keyName: 'п',
-          keyCode: 'п',
-          caps: true,
-        },
-        {
-          keyName: 'р',
-          keyCode: 'р',
-          caps: true,
-        },
-        {
-          keyName: 'о',
-          keyCode: 'о',
-          caps: true,
-        },
-        {
-          keyName: 'л',
-          keyCode: 'л',
-          caps: true,
-        },
-        {
-          keyName: 'д',
-          keyCode: 'д',
-          caps: true,
-        },
-        {
-          keyName: 'ж',
-          keyCode: 'ж',
-          caps: true,
-        },
-        {
-          keyName: 'э',
-          keyCode: 'э',
-          caps: true,
-        },
-        {
-          keyName: 'Enter',
-          keyCode: 'Enter',
-          caps: false,
-        },
-      ],
-      [
-        {
-          keyName: 'Shift',
-          keyCode: 'Shift',
-          caps: false,
-        },
-        {
-          keyName: 'я',
-          keyCode: 'я',
-          caps: true,
-        },
-        {
-          keyName: 'ч',
-          keyCode: 'ч',
-          caps: true,
-        },
-        {
-          keyName: 'с',
-          keyCode: 'с',
-          caps: true,
-        },
-        {
-          keyName: 'м',
-          keyCode: 'м',
-          caps: true,
-        },
-        {
-          keyName: 'и',
-          keyCode: 'и',
-          caps: true,
-        },
-        {
-          keyName: 'т',
-          keyCode: 'т',
-          caps: true,
-        },
-        {
-          keyName: 'ь',
-          keyCode: 'ь',
-          caps: true,
-        },
-        {
-          keyName: 'б',
-          keyCode: 'б',
-          caps: true,
-        },
-        {
-          keyName: 'ю',
-          keyCode: 'ю',
-          caps: true,
-        },
-        {
-          keyName: '.',
-          keyCode: '.',
-          caps: false,
-          shift: ',',
-        },
-        {
-          keyName: '▲',
-          keyCode: 'ArrowUp',
-          caps: false,
-        },
-        {
-          keyName: 'Shift',
-          keyCode: 'Shift',
-          caps: false,
-        },
-      ],
-      [
-        {
-          keyName: 'Ctrl',
-          keyCode: 'Ctrl',
-          caps: false,
-        },
-        {
-          keyName: 'Win',
-          keyCode: 'Meta',
-          caps: false,
-        },
-        {
-          keyName: 'Alt',
-          keyCode: 'Alt',
-          caps: false,
-        },
-        {
-          keyName: '',
-          keyCode: '',
-          caps: false,
-        },
-        {
-          keyName: 'Alt',
-          keyCode: 'Alt',
-          caps: false,
-        },
-        {
-          keyName: '◄',
-          keyCode: 'ArrowLeft',
-          caps: false,
-        },
-        {
-          keyName: '▼',
-          keyCode: 'ArrowDown',
-          caps: false,
-        },
-        {
-          keyName: '►',
-          keyCode: 'ArrowRight',
-          caps: false,
-        },
-        {
-          keyName: 'Ctrl',
-          keyCode: 'Ctrl',
-          caps: false,
-        },
-      ],
-    ],
-  },
-];
-
+let keyboards;
 let lang = 'en';
 
 function createLayout() {
@@ -790,7 +93,8 @@ function backspaceTextArea() {
 }
 
 let capslock = false;
-let shift = false;
+let shiftL = false;
+let shiftR = false;
 let rerenderKeyboard;
 
 function toggleCaps() {
@@ -809,7 +113,7 @@ function btnHandler(keyCode, symbol) {
     case 'Enter':
       printToTextArea('\n');
       break;
-    case '':
+    case 'Space':
       printToTextArea(' ');
       break;
     default: {
@@ -819,15 +123,23 @@ function btnHandler(keyCode, symbol) {
   }
 }
 
-function shiftDown() {
-  if (!shift) {
-    shift = true;
+function shiftDown(side) {
+  if (!(side === 'R' ? shiftR : shiftL)) {
+    if (side === 'R') {
+      shiftR = true;
+    } else {
+      shiftL = true;
+    }
     rerenderKeyboard();
   }
 }
 
-function shiftUp() {
-  shift = false;
+function shiftUp(side) {
+  if (side === 'R') {
+    shiftR = false;
+  } else {
+    shiftL = false;
+  }
   rerenderKeyboard();
 }
 
@@ -847,23 +159,29 @@ rerenderKeyboard = function renderKeyboard() {
       keyboardBtn.setAttribute('type', 'button');
       keyboardBtn.classList.add('keyboard__key');
 
-      if ((capslock || shift) && !(capslock && shift) && currentKey.caps) {
+      if ((capslock || shiftL || shiftR) && !(capslock && (shiftL || shiftR)) && currentKey.caps) {
         keyboardBtn.innerText = currentKey.keyName.toUpperCase();
-      } else if (shift && currentKey.shift) {
+      } else if ((shiftL || shiftR) && currentKey.shift) {
         keyboardBtn.innerText = currentKey.shift;
       } else {
         keyboardBtn.innerText = currentKey.keyName;
       }
 
-      keyboardBtn.classList.add(currentKey.keyCode ? currentKey.keyCode.toLowerCase() : 'space');
+      keyboardBtn.classList.add(currentKey.keyCode.toLowerCase());
       if (currentKey.caps) {
         keyboardBtn.classList.add('caps');
       }
 
-      if (currentKey.keyCode === 'Shift') {
-        keyboardBtn.addEventListener('mousedown', shiftDown);
-        keyboardBtn.addEventListener('mouseup', shiftUp);
-        if (shift) {
+      if (currentKey.keyCode === 'ShiftLeft') {
+        keyboardBtn.addEventListener('mousedown', shiftDown.bind(this, 'L'));
+        keyboardBtn.addEventListener('mouseup', shiftUp.bind(this, 'L'));
+        if (shiftL) {
+          keyboardBtn.classList.add('active');
+        }
+      } else if (currentKey.keyCode === 'ShiftRight') {
+        keyboardBtn.addEventListener('mousedown', shiftDown.bind(this, 'R'));
+        keyboardBtn.addEventListener('mouseup', shiftUp.bind(this, 'R'));
+        if (shiftR) {
           keyboardBtn.classList.add('active');
         }
       } else if (currentKey.keyCode === 'CapsLock') {
@@ -881,5 +199,10 @@ rerenderKeyboard = function renderKeyboard() {
   }
 };
 
-document.addEventListener('load', createLayout());
-document.addEventListener('load', rerenderKeyboard());
+fetch('./keyboards.json')
+  .then((response) => response.json())
+  .then((data) => {
+    keyboards = data;
+    document.addEventListener('load', createLayout());
+    document.addEventListener('load', rerenderKeyboard());
+  });

@@ -1,0 +1,697 @@
+[
+  {
+    "lang": "en",
+    "keyboard": [
+      [
+        {
+          "keyName": "`",
+          "keyCode": "Backquote",
+          "caps": false,
+          "shift": "-"
+        },
+        {
+          "keyName": "1",
+          "keyCode": "Digit1",
+          "caps": false,
+          "shift": "!"
+        },
+        {
+          "keyName": "2",
+          "keyCode": "Digit2",
+          "caps": false,
+          "shift": "@"
+        },
+        {
+          "keyName": "3",
+          "keyCode": "Digit3",
+          "caps": false,
+          "shift": "#"
+        },
+        {
+          "keyName": "4",
+          "keyCode": "Digit4",
+          "caps": false,
+          "shift": "$"
+        },
+        {
+          "keyName": "5",
+          "keyCode": "Digit5",
+          "caps": false,
+          "shift": "%"
+        },
+        {
+          "keyName": "6",
+          "keyCode": "Digit6",
+          "caps": false,
+          "shift": "^"
+        },
+        {
+          "keyName": "7",
+          "keyCode": "Digit7",
+          "caps": false,
+          "shift": "&"
+        },
+        {
+          "keyName": "8",
+          "keyCode": "Digit8",
+          "caps": false,
+          "shift": "*"
+        },
+        {
+          "keyName": "9",
+          "keyCode": "Digit9",
+          "caps": false,
+          "shift": "("
+        },
+        {
+          "keyName": "0",
+          "keyCode": "Digit0",
+          "caps": false,
+          "shift": ")"
+        },
+        {
+          "keyName": "-",
+          "keyCode": "Minus",
+          "caps": false,
+          "shift": "_"
+        },
+        {
+          "keyName": "=",
+          "keyCode": "Equal",
+          "caps": false,
+          "shift": "+"
+        },
+        {
+          "keyName": "Backspace",
+          "keyCode": "Backspace",
+          "caps": false
+        }
+      ],
+      [
+        {
+          "keyName": "Tab",
+          "keyCode": "Tab",
+          "caps": false
+        },
+        {
+          "keyName": "q",
+          "keyCode": "KeyQ",
+          "caps": true
+        },
+        {
+          "keyName": "w",
+          "keyCode": "KeyW",
+          "caps": true
+        },
+        {
+          "keyName": "e",
+          "keyCode": "KeyE",
+          "caps": true
+        },
+        {
+          "keyName": "r",
+          "keyCode": "KeyR",
+          "caps": true
+        },
+        {
+          "keyName": "t",
+          "keyCode": "KeyT",
+          "caps": true
+        },
+        {
+          "keyName": "y",
+          "keyCode": "KeyY",
+          "caps": true
+        },
+        {
+          "keyName": "u",
+          "keyCode": "KeyU",
+          "caps": true
+        },
+        {
+          "keyName": "i",
+          "keyCode": "KeyI",
+          "caps": true
+        },
+        {
+          "keyName": "o",
+          "keyCode": "KeyO",
+          "caps": true
+        },
+        {
+          "keyName": "p",
+          "keyCode": "KeyP",
+          "caps": true
+        },
+        {
+          "keyName": "[",
+          "keyCode": "BracketLeft",
+          "caps": false,
+          "shift": "{"
+        },
+        {
+          "keyName": "]",
+          "keyCode": "BracketRight",
+          "caps": false,
+          "shift": "}"
+        },
+        {
+          "keyName": "\\",
+          "keyCode": "Backslash",
+          "caps": false,
+          "shift": "|"
+        }
+      ],
+      [
+        {
+          "keyName": "CapsLock",
+          "keyCode": "CapsLock",
+          "caps": false
+        },
+        {
+          "keyName": "a",
+          "keyCode": "KeyA",
+          "caps": true
+        },
+        {
+          "keyName": "s",
+          "keyCode": "KeyS",
+          "caps": true
+        },
+        {
+          "keyName": "d",
+          "keyCode": "KeyD",
+          "caps": true
+        },
+        {
+          "keyName": "f",
+          "keyCode": "KeyF",
+          "caps": true
+        },
+        {
+          "keyName": "g",
+          "keyCode": "KeyG",
+          "caps": true
+        },
+        {
+          "keyName": "h",
+          "keyCode": "KeyH",
+          "caps": true
+        },
+        {
+          "keyName": "j",
+          "keyCode": "KeyJ",
+          "caps": true
+        },
+        {
+          "keyName": "k",
+          "keyCode": "KeyK",
+          "caps": true
+        },
+        {
+          "keyName": "l",
+          "keyCode": "KeyL",
+          "caps": true
+        },
+        {
+          "keyName": ";",
+          "keyCode": "Semicolon",
+          "caps": false,
+          "shift": ":"
+        },
+        {
+          "keyName": "'",
+          "keyCode": "Quote",
+          "caps": false,
+          "shift": "\""
+        },
+        {
+          "keyName": "Enter",
+          "keyCode": "Enter",
+          "caps": false
+        }
+      ],
+      [
+        {
+          "keyName": "Shift",
+          "keyCode": "ShiftLeft",
+          "caps": false
+        },
+        {
+          "keyName": "z",
+          "keyCode": "KeyZ",
+          "caps": true
+        },
+        {
+          "keyName": "x",
+          "keyCode": "KeyX",
+          "caps": true
+        },
+        {
+          "keyName": "c",
+          "keyCode": "KeyC",
+          "caps": true
+        },
+        {
+          "keyName": "v",
+          "keyCode": "KeyV",
+          "caps": true
+        },
+        {
+          "keyName": "b",
+          "keyCode": "KeyB",
+          "caps": true
+        },
+        {
+          "keyName": "n",
+          "keyCode": "KeyN",
+          "caps": true
+        },
+        {
+          "keyName": "m",
+          "keyCode": "KeyM",
+          "caps": true
+        },
+        {
+          "keyName": ",",
+          "keyCode": "Comma",
+          "caps": false,
+          "shift": "<"
+        },
+        {
+          "keyName": ".",
+          "keyCode": "Period",
+          "caps": false,
+          "shift": ">"
+        },
+        {
+          "keyName": "/",
+          "keyCode": "Slash",
+          "caps": false,
+          "shift": "?"
+        },
+        {
+          "keyName": "▲",
+          "keyCode": "ArrowUp",
+          "caps": false
+        },
+        {
+          "keyName": "Shift",
+          "keyCode": "ShiftRight",
+          "caps": false
+        }
+      ],
+      [
+        {
+          "keyName": "Ctrl",
+          "keyCode": "ControlLeft",
+          "caps": false
+        },
+        {
+          "keyName": "Win",
+          "keyCode": "MetaLeft",
+          "caps": false
+        },
+        {
+          "keyName": "Alt",
+          "keyCode": "AltLeft",
+          "caps": false
+        },
+        {
+          "keyName": "",
+          "keyCode": "Space",
+          "caps": false
+        },
+        {
+          "keyName": "Alt",
+          "keyCode": "AltRight",
+          "caps": false
+        },
+        {
+          "keyName": "◄",
+          "keyCode": "ArrowLeft",
+          "caps": false
+        },
+        {
+          "keyName": "▼",
+          "keyCode": "ArrowDown",
+          "caps": false
+        },
+        {
+          "keyName": "►",
+          "keyCode": "ArrowRight",
+          "caps": false
+        },
+        {
+          "keyName": "Ctrl",
+          "keyCode": "ControlRight",
+          "caps": false
+        }
+      ]
+    ]
+  },
+  {
+    "lang": "ru",
+    "keyboard": [
+      [
+        {
+          "keyName": "ё",
+          "keyCode": "Backquote",
+          "caps": true
+        },
+        {
+          "keyName": "1",
+          "keyCode": "Digit1",
+          "caps": false,
+          "shift": "!"
+        },
+        {
+          "keyName": "2",
+          "keyCode": "Digit2",
+          "caps": false,
+          "shift": "\""
+        },
+        {
+          "keyName": "3",
+          "keyCode": "Digit3",
+          "caps": false,
+          "shift": "№"
+        },
+        {
+          "keyName": "4",
+          "keyCode": "Digit4",
+          "caps": false,
+          "shift": ";"
+        },
+        {
+          "keyName": "5",
+          "keyCode": "Digit5",
+          "caps": false,
+          "shift": "%"
+        },
+        {
+          "keyName": "6",
+          "keyCode": "Digit6",
+          "caps": false,
+          "shift": ":"
+        },
+        {
+          "keyName": "7",
+          "keyCode": "Digit7",
+          "caps": false,
+          "shift": "?"
+        },
+        {
+          "keyName": "8",
+          "keyCode": "Digit8",
+          "caps": false,
+          "shift": "*"
+        },
+        {
+          "keyName": "9",
+          "keyCode": "Digit9",
+          "caps": false,
+          "shift": "("
+        },
+        {
+          "keyName": "0",
+          "keyCode": "Digit0",
+          "caps": false,
+          "shift": ")"
+        },
+        {
+          "keyName": "-",
+          "keyCode": "Minus",
+          "caps": false,
+          "shift": "_"
+        },
+        {
+          "keyName": "=",
+          "keyCode": "Equal",
+          "caps": false,
+          "shift": "+"
+        },
+        {
+          "keyName": "Backspace",
+          "keyCode": "Backspace",
+          "caps": false
+        }
+      ],
+      [
+        {
+          "keyName": "Tab",
+          "keyCode": "Tab",
+          "caps": false
+        },
+        {
+          "keyName": "й",
+          "keyCode": "KeyQ",
+          "caps": true
+        },
+        {
+          "keyName": "ц",
+          "keyCode": "KeyW",
+          "caps": true
+        },
+        {
+          "keyName": "у",
+          "keyCode": "KeyE",
+          "caps": true
+        },
+        {
+          "keyName": "к",
+          "keyCode": "KeyR",
+          "caps": true
+        },
+        {
+          "keyName": "е",
+          "keyCode": "KeyT",
+          "caps": true
+        },
+        {
+          "keyName": "н",
+          "keyCode": "KeyY",
+          "caps": true
+        },
+        {
+          "keyName": "г",
+          "keyCode": "KeyU",
+          "caps": true
+        },
+        {
+          "keyName": "ш",
+          "keyCode": "KeyI",
+          "caps": true
+        },
+        {
+          "keyName": "щ",
+          "keyCode": "KeyO",
+          "caps": true
+        },
+        {
+          "keyName": "з",
+          "keyCode": "KeyP",
+          "caps": true
+        },
+        {
+          "keyName": "х",
+          "keyCode": "BracketLeft",
+          "caps": true
+        },
+        {
+          "keyName": "ъ",
+          "keyCode": "BracketRight",
+          "caps": true
+        },
+        {
+          "keyName": "\\",
+          "keyCode": "Backslash",
+          "caps": false,
+          "shift": "/"
+        }
+      ],
+      [
+        {
+          "keyName": "CapsLock",
+          "keyCode": "CapsLock",
+          "caps": false
+        },
+        {
+          "keyName": "ф",
+          "keyCode": "KeyA",
+          "caps": true
+        },
+        {
+          "keyName": "ы",
+          "keyCode": "KeyS",
+          "caps": true
+        },
+        {
+          "keyName": "в",
+          "keyCode": "KeyD",
+          "caps": true
+        },
+        {
+          "keyName": "а",
+          "keyCode": "KeyF",
+          "caps": true
+        },
+        {
+          "keyName": "п",
+          "keyCode": "KeyG",
+          "caps": true
+        },
+        {
+          "keyName": "р",
+          "keyCode": "KeyH",
+          "caps": true
+        },
+        {
+          "keyName": "о",
+          "keyCode": "KeyJ",
+          "caps": true
+        },
+        {
+          "keyName": "л",
+          "keyCode": "KeyK",
+          "caps": true
+        },
+        {
+          "keyName": "д",
+          "keyCode": "KeyL",
+          "caps": true
+        },
+        {
+          "keyName": "ж",
+          "keyCode": "Semicolon",
+          "caps": true
+        },
+        {
+          "keyName": "э",
+          "keyCode": "Quote",
+          "caps": true
+        },
+        {
+          "keyName": "Enter",
+          "keyCode": "Enter",
+          "caps": false
+        }
+      ],
+      [
+        {
+          "keyName": "Shift",
+          "keyCode": "ShiftLeft",
+          "caps": false
+        },
+        {
+          "keyName": "я",
+          "keyCode": "KeyZ",
+          "caps": true
+        },
+        {
+          "keyName": "ч",
+          "keyCode": "KeyX",
+          "caps": true
+        },
+        {
+          "keyName": "с",
+          "keyCode": "KeyC",
+          "caps": true
+        },
+        {
+          "keyName": "м",
+          "keyCode": "KeyV",
+          "caps": true
+        },
+        {
+          "keyName": "и",
+          "keyCode": "KeyB",
+          "caps": true
+        },
+        {
+          "keyName": "т",
+          "keyCode": "KeyN",
+          "caps": true
+        },
+        {
+          "keyName": "ь",
+          "keyCode": "KeyM",
+          "caps": true
+        },
+        {
+          "keyName": "б",
+          "keyCode": "Comma",
+          "caps": true
+        },
+        {
+          "keyName": "ю",
+          "keyCode": "Period",
+          "caps": true
+        },
+        {
+          "keyName": ".",
+          "keyCode": "Slash",
+          "caps": false,
+          "shift": ","
+        },
+        {
+          "keyName": "▲",
+          "keyCode": "ArrowUp",
+          "caps": false
+        },
+        {
+          "keyName": "Shift",
+          "keyCode": "ShiftRight",
+          "caps": false
+        }
+      ],
+      [
+        {
+          "keyName": "Ctrl",
+          "keyCode": "ControlLeft",
+          "caps": false
+        },
+        {
+          "keyName": "Win",
+          "keyCode": "MetaLeft",
+          "caps": false
+        },
+        {
+          "keyName": "Alt",
+          "keyCode": "AltLeft",
+          "caps": false
+        },
+        {
+          "keyName": "",
+          "keyCode": "",
+          "caps": false
+        },
+        {
+          "keyName": "Alt",
+          "keyCode": "AltRight",
+          "caps": false
+        },
+        {
+          "keyName": "◄",
+          "keyCode": "ArrowLeft",
+          "caps": false
+        },
+        {
+          "keyName": "▼",
+          "keyCode": "ArrowDown",
+          "caps": false
+        },
+        {
+          "keyName": "►",
+          "keyCode": "ArrowRight",
+          "caps": false
+        },
+        {
+          "keyName": "Ctrl",
+          "keyCode": "ControlRight",
+          "caps": false
+        }
+      ]
+    ]
+  }
+]
