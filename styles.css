@@ -85,3 +85,13 @@
 .upper-case {
     text-transform: uppercase;
 }
+
+.active {
+    background-color:#04b87c;
+    border-radius: 15px;
+}
+
+.keyboard__key:active {
+    background-color:#04b87c;
+    border-radius: 15px;
+}
