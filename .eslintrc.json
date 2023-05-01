@@ -2,13 +2,6 @@
     "env": {
         "browser": true   
     },
-    // "import/extensions": [
-    //     "error",
-    //     "always",
-    //     {
-    //       "json": "never"
-    //     }
-    //   ],
     "extends": "airbnb-base"
 }
 
