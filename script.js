@@ -1,5 +1,8 @@
 let keyboards;
 let lang = 'en';
+let capslock = false;
+let shiftL = false;
+let shiftR = false;
 
 function createLayout() {
   const main = document.createElement('main');
@@ -32,6 +35,40 @@ function createLayout() {
   main.appendChild(systemInfo);
   main.appendChild(changeLangInfo);
   document.body.appendChild(main);
+}
+
+function getKeySymbol(key) {
+  if ((capslock || shiftL || shiftR) && !(capslock && (shiftL || shiftR)) && key.caps) {
+    return key.keyName.toUpperCase();
+  }
+  if ((shiftL || shiftR) && key.shift) {
+    return key.shift;
+  }
+  return key.keyName;
+}
+
+function rerenderSymbols() {
+  let keyboard = [];
+  keyboard = keyboards.find((element) => element.lang === lang).keyboard;
+
+  for (let rowIndex = 0; rowIndex < keyboard.length; rowIndex += 1) {
+    const row = keyboard[rowIndex];
+    for (let keyIndex = 0; keyIndex < row.length; keyIndex += 1) {
+      const key = row[keyIndex];
+      const button = document.querySelector(`.${key.keyCode.toLowerCase()}`);
+      button.innerText = getKeySymbol(key);
+    }
+  }
+}
+
+function setButtonActive(classSelector, active) {
+  const button = document.querySelector(`.${classSelector}`);
+  if (!button) return;
+  if (active) {
+    button.classList.add('active');
+  } else {
+    button.classList.remove('active');
+  }
 }
 
 function printToTextArea(symbol) {
@@ -81,18 +118,15 @@ function deleteTextArea() {
   textArea.focus();
 }
 
-let capslock = false;
-let shiftL = false;
-let shiftR = false;
-let rerenderKeyboard;
-
 function toggleCaps() {
   capslock = !capslock;
-  rerenderKeyboard();
+  setButtonActive('capslock', capslock);
+  rerenderSymbols();
 }
 
-function btnHandler(keyCode, symbol) {
-  switch (keyCode) {
+function btnHandler(key) {
+  const symbol = getKeySymbol(key);
+  switch (key.keyCode) {
     case 'CapsLock':
       toggleCaps();
       break;
@@ -120,37 +154,27 @@ function btnHandler(keyCode, symbol) {
   }
 }
 
-function shiftDown(side) {
-  if (!(side === 'R' ? shiftR : shiftL)) {
-    if (side === 'R') {
-      shiftR = true;
-    } else {
-      shiftL = true;
-    }
-    rerenderKeyboard();
+function shiftDown() {
+  if (this.classList.contains('shiftright')) {
+    shiftR = true;
+  } else {
+    shiftL = true;
   }
+  this.classList.add('active');
+  rerenderSymbols();
 }
 
-function shiftUp(side) {
-  if (side === 'R') {
+function shiftUp() {
+  if (this.classList.contains('shiftright')) {
     shiftR = false;
   } else {
     shiftL = false;
   }
-  rerenderKeyboard();
+  this.classList.remove('active');
+  rerenderSymbols();
 }
 
-function getKeySymbol(key) {
-  if ((capslock || shiftL || shiftR) && !(capslock && (shiftL || shiftR)) && key.caps) {
-    return key.keyName.toUpperCase();
-  }
-  if ((shiftL || shiftR) && key.shift) {
-    return key.shift;
-  }
-  return key.keyName;
-}
-
-rerenderKeyboard = function renderKeyboard() {
+function renderKeyboard() {
   const mainContainer = document.querySelector('.keyboard');
   mainContainer.innerHTML = '';
   let keyboard = [];
@@ -173,38 +197,28 @@ rerenderKeyboard = function renderKeyboard() {
         keyboardBtn.classList.add('caps');
       }
 
-      if (currentKey.keyCode === 'CapsLock' && capslock) {
-        keyboardBtn.classList.add('active');
-      }
-
       if (currentKey.keyCode === 'ShiftLeft') {
-        keyboardBtn.addEventListener('mousedown', shiftDown.bind(this, 'L'));
-        keyboardBtn.addEventListener('mouseup', shiftUp.bind(this, 'L'));
-        if (shiftL) {
-          keyboardBtn.classList.add('active');
-        }
+        keyboardBtn.addEventListener('mousedown', shiftDown);
+        keyboardBtn.addEventListener('mouseup', shiftUp);
       } else if (currentKey.keyCode === 'ShiftRight') {
-        keyboardBtn.addEventListener('mousedown', shiftDown.bind(this, 'R'));
-        keyboardBtn.addEventListener('mouseup', shiftUp.bind(this, 'R'));
-        if (shiftR) {
-          keyboardBtn.classList.add('active');
-        }
+        keyboardBtn.addEventListener('mousedown', shiftDown);
+        keyboardBtn.addEventListener('mouseup', shiftUp);
       } else {
-        keyboardBtn.addEventListener('click', btnHandler.bind(this, currentKey.keyCode, keyboardBtn.innerText));
+        keyboardBtn.addEventListener('click', btnHandler.bind(this, currentKey));
       }
 
       keyboardRaw.appendChild(keyboardBtn);
     }
     mainContainer.appendChild(keyboardRaw);
   }
-};
+}
 
 fetch('./keyboards.json')
   .then((response) => response.json())
   .then((data) => {
     keyboards = data;
-    document.addEventListener('load', createLayout());
-    document.addEventListener('load', rerenderKeyboard());
+    createLayout();
+    renderKeyboard();
   });
 
 function getKeyByCode(code) {
@@ -227,7 +241,7 @@ document.addEventListener('keydown', (event) => {
   const key = getKeyByCode(event.code);
   if (!key) return;
   event.preventDefault();
-  btnHandler(event.code, getKeySymbol(key));
+  btnHandler(key);
 
   if (event.altKey && event.ctrlKey) {
     if (lang === 'en') {
@@ -235,27 +249,21 @@ document.addEventListener('keydown', (event) => {
     } else {
       lang = 'en';
     }
-    rerenderKeyboard();
-    document.querySelector('.altleft').classList.add('active');
-    document.querySelector('.controlleft').classList.add('active');
-    return;
+    rerenderSymbols();
   }
 
   switch (event.code) {
     case 'CapsLock':
       break;
     case 'ShiftLeft':
-      shiftDown('L');
+      shiftDown.call(document.querySelector('.shiftleft'));
       break;
     case 'ShiftRight':
-      shiftDown('R');
+      shiftDown.call(document.querySelector('.shiftright'));
       break;
     default: {
       const keyCode = event.code.toLowerCase();
-      const button = document.querySelector(`.${keyCode}`);
-      if (button) {
-        button.classList.add('active');
-      }
+      setButtonActive(keyCode, true);
       break;
     }
   }
@@ -268,18 +276,13 @@ document.addEventListener('keyup', (event) => {
   switch (event.code) {
     case 'CapsLock':
       break;
-    case 'ShiftLeft':
-      shiftUp('L');
-      break;
-    case 'ShiftRight':
-      shiftUp('R');
+    case 'ShiftLeft': case 'ShiftRight':
+      shiftUp.call(document.querySelector('.shiftleft'));
+      shiftUp.call(document.querySelector('.shiftright'));
       break;
     default: {
       const keyCode = event.code.toLowerCase();
-      const button = document.querySelector(`.${keyCode}`);
-      if (button) {
-        button.classList.remove('active');
-      }
+      setButtonActive(keyCode, false);
       break;
     }
   }
