@@ -43,7 +43,7 @@ function createLayout() {
 
   const typingArea = document.createElement('textarea');
   typingArea.setAttribute('rows', '8');
-  typingArea.setAttribute('cols', '75');
+  typingArea.setAttribute('cols', '70');
   typingArea.setAttribute('placeholder', 'Start typing here');
   typingArea.setAttribute('id', 'typing-area');
 
