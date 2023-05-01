@@ -124,3 +124,8 @@
 .arrowdown {
     background-color: black;
 }
+
+.info {
+    margin: 0;
+    font-size: 24px;
+}

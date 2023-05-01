@@ -9,38 +9,6 @@ function createLayout() {
   keyboardLabel.classList.add('area-label');
   keyboardLabel.innerText = 'Virtual keyboard';
 
-  const chooseLang = document.createElement('div');
-  chooseLang.classList.add('choose-lang');
-
-  const chooseLangOption1 = document.createElement('div');
-  chooseLangOption1.classList.add('choose-lang__option');
-
-  const chooseLangInput1 = document.createElement('input');
-  chooseLangInput1.setAttribute('name', 'lang');
-  chooseLangInput1.setAttribute('type', 'radio');
-  chooseLangInput1.setAttribute('id', 'en');
-  chooseLangInput1.setAttribute('value', 'en');
-  chooseLangInput1.setAttribute('checked', true);
-  chooseLangInput1.classList.add('choose-lang__option');
-
-  const labelOption1 = document.createElement('label');
-  labelOption1.setAttribute('for', 'en');
-  labelOption1.innerText = 'English';
-
-  const chooseLangOption2 = document.createElement('div');
-  chooseLangOption2.classList.add('choose-lang__option');
-
-  const chooseLangInput2 = document.createElement('input');
-  chooseLangInput2.name = 'lang';
-  chooseLangInput2.type = 'radio';
-  chooseLangInput2.id = 'ru';
-  chooseLangInput2.value = 'ru';
-  chooseLangInput2.classList.add('choose-lang__option');
-
-  const labelOption2 = document.createElement('label');
-  labelOption2.setAttribute('for', 'ru');
-  labelOption2.innerText = 'Russian';
-
   const typingArea = document.createElement('textarea');
   typingArea.setAttribute('rows', '8');
   typingArea.setAttribute('cols', '70');
@@ -50,16 +18,19 @@ function createLayout() {
   const keyboard = document.createElement('div');
   keyboard.classList.add('keyboard');
 
+  const systemInfo = document.createElement('p');
+  systemInfo.innerText = 'Клавиатура создана в операционной системе Windows';
+  systemInfo.classList.add('info');
+
+  const changeLangInfo = document.createElement('p');
+  changeLangInfo.innerText = 'Для переключения языка комбинация: левыe ctrl + alt';
+  changeLangInfo.classList.add('info');
+
   main.appendChild(keyboardLabel);
-  chooseLangOption1.appendChild(chooseLangInput1);
-  chooseLangOption1.appendChild(labelOption1);
-  chooseLang.appendChild(chooseLangOption1);
-  chooseLangOption2.appendChild(chooseLangInput2);
-  chooseLangOption2.appendChild(labelOption2);
-  chooseLang.appendChild(chooseLangOption2);
-  main.appendChild(chooseLang);
   main.appendChild(typingArea);
   main.appendChild(keyboard);
+  main.appendChild(systemInfo);
+  main.appendChild(changeLangInfo);
   document.body.appendChild(main);
 }
 
