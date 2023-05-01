@@ -32,6 +32,10 @@
     padding: 0.5rem;
 }
 
+#typing-area:focus {
+    outline: none;
+}
+
 .keyboard {
     border-radius: 5px;
     display: flex;
