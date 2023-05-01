@@ -1,5 +1,5 @@
 let keyboards;
-let lang = 'en';
+let lang;
 let capslock = false;
 let shiftL = false;
 let shiftR = false;
@@ -213,14 +213,6 @@ function renderKeyboard() {
   }
 }
 
-fetch('./keyboards.json')
-  .then((response) => response.json())
-  .then((data) => {
-    keyboards = data;
-    createLayout();
-    renderKeyboard();
-  });
-
 function getKeyByCode(code) {
   let keyboard = [];
   keyboard = keyboards.find((element) => element.lang === lang).keyboard;
@@ -286,4 +278,20 @@ document.addEventListener('keyup', (event) => {
       break;
     }
   }
+});
+
+window.addEventListener('load', () => {
+  lang = localStorage.getItem('lang') || 'en';
+
+  fetch('./keyboards.json')
+    .then((response) => response.json())
+    .then((data) => {
+      keyboards = data;
+      createLayout();
+      renderKeyboard();
+    });
+});
+
+window.addEventListener('beforeunload', () => {
+  localStorage.setItem('lang', lang);
 });
