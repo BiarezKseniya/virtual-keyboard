@@ -160,6 +160,11 @@
           "keyCode": "Backslash",
           "caps": false,
           "shift": "|"
+        },
+        {
+          "keyName": "Del",
+          "keyCode": "Delete",
+          "caps": false
         }
       ],
       [
@@ -508,6 +513,11 @@
           "keyCode": "Backslash",
           "caps": false,
           "shift": "/"
+        },
+        {
+          "keyName": "Del",
+          "keyCode": "Delete",
+          "caps": false
         }
       ],
       [

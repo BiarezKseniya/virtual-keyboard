@@ -92,6 +92,24 @@ function backspaceTextArea() {
   textArea.focus();
 }
 
+function deleteTextArea() {
+  const textArea = document.querySelector('#typing-area');
+  const textLength = textArea.value.length;
+  const startPos = textArea.selectionStart;
+  let endPos = textArea.selectionEnd;
+
+  if (startPos === endPos) {
+    if (endPos === textLength) return;
+    endPos += 1;
+  }
+
+  textArea.value = textArea.value.substring(0, startPos)
+    + textArea.value.substring(endPos, textArea.value.length);
+  textArea.selectionStart = startPos;
+  textArea.selectionEnd = startPos;
+  textArea.focus();
+}
+
 let capslock = false;
 let shiftL = false;
 let shiftR = false;
@@ -108,6 +126,9 @@ function btnHandler(keyCode, symbol) {
       toggleCaps();
       break;
     case 'ShiftLeft': case 'ShiftRight': case 'ControlLeft': case 'ControlRight': case 'AltLeft': case 'AltRight': case 'MetaLeft':
+      break;
+    case 'Delete':
+      deleteTextArea();
       break;
     case 'Backspace':
       backspaceTextArea();
